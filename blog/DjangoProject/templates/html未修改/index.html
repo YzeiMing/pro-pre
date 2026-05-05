@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<!--修改bg-color和border和底部间距-->
+<header class="p-3 text-bg-light border-bottom mb-3">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <!--修改图标-->
+                <img src="{% static 'image/logo.png' %}" alt="" height="40">
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <!--导航-->
+                <li><a href="#" class="nav-link px-2 text-secondary">首页</a></li>
+                <li><a href="#" class="nav-link px-2 text-secondary">发布博客</a></li>
+            </ul>
+
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-dark" placeholder="搜索..." aria-label="Search">
+            </form>
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-primary me-2">登录</button>
+                <button type="button" class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </div>
+</header>
+                            <!--增加容器,圆角-->
+<main class="container bg-white p-3 rounded">
+    <h1>博客列表</h1>
+    <!--设置行与列-->
+    <div class="row row-cols-2 row-gap-4">
+        <div class="col">
+            <div class="card ">
+                <!--设置-->
+                <div class="card-header">
+                    <a href="">Django学习记录</a>
+                </div>
+                <div class="card-body" style="height: 180px">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer text-body-secondary d-flex justify-content-between align-items-center">
+                    <div>
+                        <img src="{% static 'image/avatar.webp' %}" alt="" class="rounded-circle" width="30" height="30">
+                        Jay
+                    </div>
+                    <div>
+                        time....
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

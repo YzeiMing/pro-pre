@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<!--修改bg-color和border和底部间距-->
+<header class="p-3 text-bg-light border-bottom mb-3">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <!--修改图标-->
+                <img src="{% static 'image/logo.png' %}" alt="" height="40">
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <!--导航-->
+                <li><a href="#" class="nav-link px-2 text-secondary">首页</a></li>
+                <li><a href="#" class="nav-link px-2 text-secondary">发布博客</a></li>
+            </ul>
+
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-dark" placeholder="搜索..." aria-label="Search">
+            </form>
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-primary me-2">登录</button>
+                <button type="button" class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </div>
+</header>
+                            <!--增加容器,圆角-->
+<main class="container bg-white p-3 rounded">
+    <h1>博客详情</h1>
+    <hr>
+    <div class="mt-2">
+        <img src="{% static 'image/avatar.webp' %}" alt="" class="rounded-circle" width="30" height="30">
+        <span class="ms-2">Jay</span>
+        <span class="ms-2">于</span>
+        <span class="ms-2">time</span>
+    </div>
+    <hr>
+    <div class="py-2">
+        博客内容......
+    </div>
+    <hr>
+    <div class="mt-2">
+        <h3>评论(0):</h3>
+        <form action="" method="POST">
+            <div class="mt-2">
+                <input type="text" class="form-control" placeholder="请输入评论...">
+            </div>
+            <div class="text-end mt-2">
+                <button type="button" class="btn btn-primary">评论</button>
+            </div>
+        </form>
+    </div>
+    <div class="mt-2">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item mb-2">
+                <div class="d-flex justify-content-between text-body-secondary">
+                    <div class="user-info">
+                        <img src="{% static 'image/avatar.webp' %}" alt="" class="rounded-circle" width="40" height="40">
+                        <span class="ms-2">Jay</span>
+                    </div>
+                    <div class="create-time" style="line-height: 40px">time....</div>
+                </div>
+                <div class="mt-2">这是评论的内容...</div>
+            </li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>
